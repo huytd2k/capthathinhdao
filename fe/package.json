@@ -1,0 +1,26 @@
+{
+  "name": "fe",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "start": "svelte-kit start",
+    "gen:api-type": "node_modules/.bin/openapi-typescript http://localhost:3002/api-json/ --output src/types/api.ts"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-typescript": "^1.0.0",
+    "@sveltejs/adapter-node": "next",
+    "@sveltejs/kit": "next",
+    "@sveltejs/snowpack-config": "next",
+    "openapi-typescript": "^2.4.2",
+    "sass": "^1.0.0",
+    "svelte": "^3.29.0",
+    "svelte-preprocess": "^4.0.0",
+    "tslib": "^2.0.0",
+    "typescript": "^4.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0"
+  }
+}

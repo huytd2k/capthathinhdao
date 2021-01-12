@@ -17,7 +17,7 @@ export class CaptionController {
   }
 
   @Get()
-  @ApiQuery({ name: 'type', enum: CaptionType, required: false })
+  @ApiQuery({ name: 'type', enum: CaptionType, required: true })
   async getRandom(@Query('type') type: CaptionType) {
     return await this.captionService.findRandom(type);
   }
