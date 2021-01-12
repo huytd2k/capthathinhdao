@@ -1,3 +1,4 @@
+import { BaseEntity } from 'src/base/base.entity';
 import {
   Column,
   CreateDateColumn,
@@ -5,9 +6,10 @@ import {
   ObjectID,
   ObjectIdColumn,
 } from 'typeorm';
+import { CaptionType as CaptionTypeEnum } from '../enums/caption-type.enum';
 
 @Entity()
-export class Caption {
+export class Caption extends BaseEntity<Caption> {
   @ObjectIdColumn()
   id: ObjectID;
 
@@ -18,5 +20,5 @@ export class Caption {
   createdAt: string;
 
   @Column()
-  type: 'male' | 'female' | 'both';
+  type: CaptionTypeEnum;
 }
