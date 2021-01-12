@@ -11,9 +11,9 @@ import { AppService } from './app.service';
       useFactory: (configService: ConfigService) => {
         return {
           type: 'mongodb',
-          host: 'localhost',
-          username: 'root',
-          password: 'example',
+          host: configService.get<string>('MONGODB_HOST'),
+          username: configService.get<string>('MONGO_INITDB_ROOT_USERNAME'),
+          password: configService.get<string>('MONGO_INITDB_ROOT_PASSWORD'),
           autoLoadEntities: true, //* TRY AUTO LOAD ENTITIES
           entities: [__dirname + '**/*/entities/*.entity{.js, .ts}'],
           migrations: ['src/db/migrations/*.js'],
