@@ -1,12 +1,15 @@
 <script>
-	import Counter from '$components/Counter.svelte';
+	import Counter from "$components/Counter.svelte";
+	import { useQuery, QueryClientProvider, QueryClient } from "@sveltestack/svelte-query";
+
+	const queryClient = new QueryClient();
 </script>
 
+<style lang="scss">
+</style>
+
 <main>
-	<h1>Hello world!</h1>
-
-	<Counter/>
-	<p>Visit the <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte apps.</p>
+	<QueryClientProvider client={queryClient} >
+		Hello
+	</QueryClientProvider>
 </main>
-
-<style lang="scss"></style>

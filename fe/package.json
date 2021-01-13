@@ -20,6 +20,7 @@
     "typescript": "^4.0.0"
   },
   "dependencies": {
+    "@sveltestack/svelte-query": "^1.0.2",
     "axios": "^0.21.1",
     "dotenv": "^8.2.0"
   }

@@ -18,7 +18,7 @@ class ApiService {
     this.axios = Axios.create({ baseURL: SERVER_URL });
   }
 
-  async getRandom({type: captionType}: GetRandomCaptionQuerys ) {
+  async getRandomCaption({type: captionType}: GetRandomCaptionQuerys ) {
       return await this.axios.get<GetRandomCaptionResponse>(ApiRouteEnum.CAPTION, {params: {
           type: captionType
       }})

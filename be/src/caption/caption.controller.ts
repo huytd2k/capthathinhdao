@@ -19,6 +19,8 @@ export class CaptionController {
   @Get()
   @ApiQuery({ name: 'type', enum: CaptionType, required: true })
   async getRandom(@Query('type') type: CaptionType) {
-    return await this.captionService.findRandom(type);
+    return (
+      (await this.captionService.findRandom(type)) || 'Cannot found any quote'
+    );
   }
 }

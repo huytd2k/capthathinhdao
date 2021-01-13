@@ -170,6 +170,11 @@
   dependencies:
     "@snowpack/plugin-svelte" "^3.0.0"
 
+"@sveltestack/svelte-query@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@sveltestack/svelte-query/-/svelte-query-1.0.2.tgz#7a5451ef9a76c328d913b5ccfc70352621637e8b"
+  integrity sha512-pk3XU6fYTjb5Dvv31HOxgUyN2sMBlmgLN10Ft1R9eB6gyuV0AbBE0iwl5z4Vd4uL2ey65VEoTEj0E5r1+BXvSw==
+
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-4.0.5.tgz#bfbd50211e9dfa51ba07da58a14cdfd333205152"
